@@ -4,19 +4,15 @@ Admin dashboard template: **React + TypeScript + Tailwind CSS + Lucide Icons**, 
 
 ## Option A — Use this project as is
 
-```bash
 npm install
 npm run dev
-```
 
 ## Option B — Copy it into an existing Vite project
 
-```bash
 npm create vite@latest my-dashboard -- --template react-ts
 cd my-dashboard
 npm install lucide-react
 npm install -D tailwindcss@3 postcss autoprefixer
-```
 
 Then:
 
@@ -29,33 +25,31 @@ Then:
 
 ## Structure
 
-```
 src/
-├── App.tsx                  # Shell, global state (active view, user, settings, session) and navigation
-├── main.tsx                 # Mounts <ToastProvider><App/></ToastProvider>
-├── index.css                # Color tokens (light/dark) + Tailwind + reduced motion
-├── types.ts                 # All shared types (ViewId, filters, toasts, settings…)
-├── views/                   # One view per sidebar section
-│   ├── DashboardView.tsx    # KPIs, recent activity and status breakdown
-│   ├── TransactionsView.tsx # Filters + advanced table
-│   ├── CustomersView.tsx    # Customer list (search, sorting, jump to their transactions)
-│   ├── AnalyticsView.tsx    # Metrics, daily chart and breakdown by payment method
-│   └── SettingsView.tsx     # Profile (with validation), appearance and notifications
+├── App.tsx                    # Shell, global state (active view, user, settings, session) and navigation
+├── main.tsx                   # Mounts <ToastProvider><App/></ToastProvider>
+├── index.css                  # Color tokens (light/dark) + Tailwind + reduced motion
+├── types.ts                   # All shared types (ViewId, filters, toasts, settings…)
+├── views/                     # One view per sidebar section
+│   ├── DashboardView.tsx      # KPIs, recent activity and status breakdown
+│   ├── TransactionsView.tsx   # Filters + advanced table
+│   ├── CustomersView.tsx      # Customer list (search, sorting, jump to their transactions)
+│   ├── AnalyticsView.tsx      # Metrics, daily chart and breakdown by payment method
+│   └── SettingsView.tsx       # Profile (with validation), appearance and notifications
 ├── components/
 │   ├── Sidebar.tsx, Header.tsx, ThemeToggle.tsx, StatCard.tsx, StatusBadge.tsx
-│   ├── NotificationBell.tsx # Presentational panel; state lives in App
-│   ├── UserMenu.tsx         # Reports the chosen option via onAction
-│   ├── ToastProvider.tsx    # Context + alerts viewport
-│   ├── SignedOutScreen.tsx  # Screen after "Sign out" (demo)
+│   ├── NotificationBell.tsx   # Presentational panel; state lives in App
+│   ├── UserMenu.tsx           # Reports the chosen option via onAction
+│   ├── ToastProvider.tsx      # Context + alerts viewport
+│   ├── SignedOutScreen.tsx    # Screen after "Sign out" (demo)
 │   ├── FilterBar.tsx, DataTable.tsx
 │   └── PageHeader, MetricCard, BarChart, SegmentedControl, Switch
 ├── hooks/
 │   ├── useTheme.ts, useDismiss.ts, useNotifications.ts
-│   ├── useToast.ts          # Toast context and hook
+│   ├── useToast.ts            # Toast context and hook
 │   └── useTransactionFilters.ts
-├── data/                    # mock.ts, navigation.ts, notifications.ts
-└── lib/                     # filters, customers, analytics, validation, format, utils
-```
+├── data/                      # mock.ts, navigation.ts, notifications.ts
+└── lib/                       # filters, customers, analytics, validation, format, utils
 
 ## Quick customization
 
@@ -64,4 +58,4 @@ src/
 - **Real data:** replace `STATS` and `TRANSACTIONS` in `src/data/mock.ts` with your API; components only depend on the types in `types.ts`.
 - **New transaction status:** add it to `TransactionStatus` in `types.ts` and to `STATUS_CONFIG` in `StatusBadge.tsx`.
 - **New section:** add its id to `ViewId` (`types.ts`), an item in `navigation.ts` and a `case` in `renderView` of `App.tsx`; the compiler warns if any is missing (`assertNever`).
-- **Routes:** the active view lives in state. For real URLs, add `react-router-dom` and turn the Sidebar `<button>`s into `<NavLink>`s.
+- **Routes:** the active view lives in state. For real URLs, add `react-router-dom` and turn the Sidebar `<button>`s into `<NavLink>`s.****
