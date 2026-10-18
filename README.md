@@ -1,12 +1,11 @@
 # Admin Dashboard Starter
 
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen?style=for-the-badge&logo=vercel)](PEGAR_AQUI_TU_LINK_DE_VERCEL)
+[<img src="https://img.shields.io/badge/demo-live-brightgreen?style=for-the-badge&logo=vercel">](https://admin-dashboard-starter-eight.vercel.app)
 
 Admin dashboard template: **React + TypeScript + Tailwind CSS + Lucide Icons**, with light/dark mode and a minimalist style inspired by Shadcn UI / Vercel.
 
 ## Option A — Use this project as is
 
-```bash
 npm install
 npm run dev
 
@@ -19,12 +18,12 @@ npm install -D tailwindcss@3 postcss autoprefixer
 
 Then:
 
-1. Replace the `src/` folder with this template's (delete `App.css` and the sample assets).
-2. Copy to the root: `tailwind.config.ts`, `postcss.config.js` and `index.html` (it includes the theme anti-flicker script).
-3. In `tsconfig.node.json`, add `"tailwind.config.ts"` to the `include` array.
-4. `npm run dev`.
+1. Replace the src/ folder with this template's (delete App.css and the sample assets).
+2. Copy to the root: tailwind.config.ts, postcss.config.js and index.html (it includes the theme anti-flicker script).
+3. In tsconfig.node.json, add "tailwind.config.ts" to the include array.
+4. npm run dev.
 
-> The template uses **Tailwind v3** (`tailwind.config.ts` + `postcss`). The code works with React 18 and 19.
+> The template uses **Tailwind v3** (tailwind.config.ts + postcss). The code works with React 18 and 19.
 
 ## Structure
 
@@ -56,9 +55,9 @@ src/
 
 ## Quick customization
 
-- **Colors / theme:** edit the CSS variables in `src/index.css` (`:root` and `.dark`).
-- **Navigation:** `src/data/navigation.ts`.
-- **Real data:** replace `STATS` and `TRANSACTIONS` in `src/data/mock.ts` with your API; components only depend on the types in `types.ts`.
-- **New transaction status:** add it to `TransactionStatus` in `types.ts` and to `STATUS_CONFIG` in `StatusBadge.tsx`.
-- **New section:** add its id to `ViewId` (`types.ts`), an item in `navigation.ts` and a `case` in `renderView` of `App.tsx`; the compiler warns if any is missing (`assertNever`).
-- **Routes:** the active view lives in state. For real URLs, add `react-router-dom` and turn the Sidebar `<button>`s into `<NavLink>`s.****
+- **Colors / theme:** edit the CSS variables in src/index.css (:root and .dark).
+- **Navigation:** src/data/navigation.ts.
+- **Real data:** replace STATS and TRANSACTIONS in src/data/mock.ts with your API; components only depend on the types in types.ts.
+- **New transaction status:** add it to TransactionStatus in types.ts and to STATUS_CONFIG in StatusBadge.tsx.
+- **New section:** add its id to ViewId (types.ts), an item in navigation.ts and a case in renderView of App.tsx; the compiler warns if any is missing (assertNever).
+- **Routes:** the active view lives in state. For real URLs, add react-router-dom and turn the Sidebar <button>s into <NavLink>s.
