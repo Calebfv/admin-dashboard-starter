@@ -5,8 +5,8 @@
 A clean, minimalist admin dashboard template built with **React + TypeScript + Tailwind CSS + Lucide Icons**. It ships with light/dark mode and a design inspired by Shadcn UI and Vercel.
 
 <p align="center">
-  <img src="preview-light.png" alt="Admin Dashboard Starter in light mode" width="49%" />
-  <img src="preview-dark.png" alt="Admin Dashboard Starter in dark mode" width="49%" />
+  <img src="docs/preview-light.png" alt="Admin Dashboard Starter in light mode" width="49%" />
+  <img src="docs/preview-dark.png" alt="Admin Dashboard Starter in dark mode" width="49%" />
 </p>
 
 ![React](https://img.shields.io/badge/React-18%20%7C%2019-61dafb?logo=react&logoColor=white)
