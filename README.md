@@ -1,9 +1,12 @@
 # Admin Dashboard Starter
 
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen?style=for-the-badge&logo=vercel)](PEGAR_AQUI_TU_LINK_DE_VERCEL)
+
 Admin dashboard template: **React + TypeScript + Tailwind CSS + Lucide Icons**, with light/dark mode and a minimalist style inspired by Shadcn UI / Vercel.
 
 ## Option A — Use this project as is
 
+```bash
 npm install
 npm run dev
 
